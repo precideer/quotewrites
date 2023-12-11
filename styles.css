@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;900&display=swap');
+
+body {
+    font-family: 'Noto Serif JP', sans-serif;
+    background-color: #FAF0E6; /* Light beige background */
+    color: #483122; /* Darker brown color for text */
+    padding-bottom: 100px;
+    padding-top: 70px;
+}
+
+h1 {
+    font-size: 5rem;
+    font-weight: 900;
+    color: #483122;
+    padding-bottom: 10px;
+    padding-top: 200px;
+}
+
+h1 .accent {
+    color: #14A2B8;
+}
+
+h2 {
+    text-align: center;
+    font-weight: 900;
+    padding-bottom: 20px;
+}
+
+input[type="text"],
+input[type="password"],
+textarea {
+    color: #483122 !important;
+}
+
+.blockquote {
+    padding: 20px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    background-color: #ebe1d8;
+    border-left: 5px solid #483122;
+    text-align: left;
+}
+
+.blockquote-footer {
+    color: #806d5b !important;
+}
+
+.btn, a {
+    color: #FAF0E6 !important;
+    background-color: #14A2B8 !important;
+    border: 2px solid #14A2B8 !important;
+    border-radius: 0 !important;
+    margin-bottom: 10px !important;
+}
+
+.btn:hover {
+    color: #FAF0E6 !important;
+    background-color: #483122 !important;
+    border: 2px solid #484848 !important;
+}
+
+.content {
+    margin-left: 20%;
+    text-align: left;
+}
+
+.error {
+	color: #14A2B8;
+}
+
+.form-container {
+    background-color: #ebe1d8;
+    border: 0px;
+    padding: 20px;
+    border-radius: 0;
+    text-align: left;
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.form-container input {
+    border-color: #ebe1d8 !important;
+    border-radius: 0 !important;
+}
+
+.form-control {
+    color: #483122 !important;
+    border-radius: 0 !important;
+    border-color: #99836f !important;
+}
+
+.form-control:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    border-color: #483122;
+}
+
+.form-control::placeholder {
+    color: #99836f;
+}
+
+.form-container input:focus {
+    border-color: #483122;
+    box-shadow: none;
+}
+
+.list-group-item {
+    background-color: #ebe1d8;
+    border-radius: 0;
+}
+
+.navbar {
+    background-color: #483122 !important;
+}
+
+.navbar-brand {
+    font-weight: 900;
+    color: #FAF0E6 !important;
+    background-color: transparent !important;
+    border: none !important;
+    margin: 0 !important;
+}
+
+.navbar .nav-link {
+    color: #ae9d8d !important;
+    background-color: transparent !important;
+    border: none !important;
+    margin: 0 !important;
+}
+
+.navbar .nav-link:hover {
+    color: #FAF0E6 !important;
+}
+
+a {
+    color: #14A2B8 !important;
+    background-color: transparent !important;
+    border: 0px !important;
+}
+
+a:hover {
+    color: #14A2B8 !important;
+}
