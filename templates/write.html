@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Write
+{% endblock %}
+
+{% block main %}
+    <div class="container mt-4">
+        <h2 class="mb-3">Respond to the quote:</h2>
+        <div class="blockquote">
+            <p class="mb-0">{{ quote["quote"] }}</p>
+            <footer class="blockquote-footer">{{ quote["author"] }}, <i>{{ quote["title"] }}</i></footer>
+        </div>
+        <form action="/write" method="POST">
+            <input type="hidden" name="quote_id" value="{{ quote['id'] }}">
+            <div class="form-group">
+                <textarea class="form-control" name="quotewrite" rows="8">{{ quotewrite["quotewrite"] if quotewrite and quotewrite["quotewrite"] else "" }}</textarea></textarea>            
+            </div>
+            <button type="submit" class="btn btn-primary">Save Quotewrite</button>
+        </form>
+    </div>
+{% endblock %}

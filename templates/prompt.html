@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Prompt
+{% endblock %}
+
+{% block main %}
+    <div class="text-center mt-5">
+        <h2>Prompt</h2>
+        <div>
+            <button class="btn btn-primary" onclick="location.reload()">Click to re-prompt</button>
+        </div>
+        <div class="blockquote">
+            <p class="mb-0">{{ quote }}</p>
+            <footer class="blockquote-footer">{{ author }}, <i>{{ title }}</i></footer>
+        </div>
+        <form action="/write" method="get">
+            <input type="hidden" name="quote_id" value="{{ quote_id }}">
+            <button type="submit" class="btn btn-secondary">Write</button>
+        </form>
+        <form action="/bookmark" method="post">
+            <input type="hidden" name="quote_id" value="{{ quote_id }}">
+            <button type="submit" class="btn btn-info">Bookmark</button>
+        </form>
+    </div>
+{% endblock %}

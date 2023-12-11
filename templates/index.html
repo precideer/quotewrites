@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+<div class="content">
+    <h1>Quote<span class="accent">writes</span></h1>
+    <p class="lead">Practice creative writing with literary book quote prompts.</p>
+    {% if not session.user_id %}
+    <a href="/register" class="btn custom-btn">Get Started</a>
+    {% endif %}
+</div>
+{% endblock %}

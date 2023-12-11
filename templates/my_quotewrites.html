@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    My Quotewrites
+{% endblock %}
+
+{% block main %}
+    <div class="container mt-4">
+        <h2>My Quotewrites</h2>
+        <div>
+            <h3>Bookmarked Prompts</h3>
+            <ul class="list-group mb-4">
+                {% for bookmark in bookmarks %}
+                    <li class="list-group-item">
+                        <blockquote>
+                            {{ bookmark['quote'] }}
+                            <footer class="blockquote-footer">{{ bookmark['author'] }}, <i>{{ bookmark['title'] }}</i></footer>
+                        </blockquote>
+                        <a href="/write?quote_id={{ bookmark['quote_id'] }}" class="btn btn-secondary">Write</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div>
+            <h3>Quotewrites</h3>
+            <ul class="list-group">
+                {% for quotewrite in quotewrites %}
+                    <li class="list-group-item">
+                        <blockquote>
+                            {{ quotewrite['quote'] }}
+                            <footer class="blockquote-footer">{{ quotewrite['author'] }}, <i>{{ quotewrite['title'] }}</i></footer>
+                        </blockquote>
+                        <a href="/write?quote_id={{ quotewrite['quote_id'] }}" class="btn btn-secondary">View/Edit</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+{% endblock %}
